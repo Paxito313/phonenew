@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/phoneListFragment">
+
+    <fragment
+        android:id="@+id/phoneListFragment"
+        android:name="com.example.phonenew.PhoneListFragment"
+        android:label="Phone List"
+        tools:layout="@layout/fragment_phone_list">
+        <action
+            android:id="@+id/action_phoneListFragment_to_phoneDetailFragment"
+            app:destination="@id/phoneDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneDetailFragment"
+        android:name="com.example.phonenew.PhoneDetailFragment"
+        android:label="Phone Detail"
+        tools:layout="@layout/fragment_phone_detail">
+        <argument
+            android:name="phoneId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
